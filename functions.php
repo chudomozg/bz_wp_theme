@@ -4,8 +4,8 @@
 function bz_add_css(){
     $parenthandle = 'parent-style'; 
     $theme = wp_get_theme();
-    wp_enqueue_style( $parenthandle, get_template_directory_uri() . '/style.css',  array());
     wp_enqueue_style( 'bz-fonts', get_stylesheet_directory_uri() . '/fonts/fonts.css',  array());
+    wp_enqueue_style( $parenthandle, get_template_directory_uri() . '/style.css',  array('bz-fonts'));
 }
 add_action( 'wp_enqueue_scripts', 'bz_add_css' );
 
@@ -308,4 +308,13 @@ function bz_catalog_menu() {
     register_nav_menu('bz-catalog-menu',__( 'Catalog menu' ));
   }
   add_action( 'init', 'bz_catalog_menu' );
+
+function bz_get_link($id, $classes=NULL){
+    $link = get_the_permalink($id);
+    $classes_str = isset($classes) ?  implode(" ", $classes) : "";
+    $title = get_the_title($id);
+    $tmpl = "<a href='".$link."' class='".$classes_str."'>".$title."</a>";
+    return $tmpl;
+}
+
 ?>
