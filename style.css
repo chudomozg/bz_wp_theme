@@ -1,6 +1,7 @@
 /*   
 Theme Name: Buben-Zorweg.ru
 Theme URI: домашняя-страница-темы
+Template: wp-bootstrap-starter
 Description: Тема для русскоязычного сайта Buben-Zorweg
 Author: Ivan Timoshenko
 Author URI: imake.site
@@ -9,3 +10,40 @@ Version: 0.1
 Тема для русскоязычного сайта Buben-Zorweg
 .
 */
+
+/* body */
+body {
+  font-family: "GothamSSm";
+}
+
+/* delimiter */
+.bz-delimiter {
+  height: 15px;
+  background: #d5a167;
+}
+
+/* content */
+#content.site-content {
+  padding-bottom: 0;
+  padding-top: 0;
+}
+
+.entry-content {
+  margin-top: 0;
+}
+
+/* navbar */
+.bz-navbar {
+  height: 100px;
+}
+
+.bz_navbar_dark {
+  background-color: #000000;
+}
+
+.nav-link,
+.nav-link:visited,
+.nav-link:active {
+  color: #ffffff !important;
+  size: 24px;
+}

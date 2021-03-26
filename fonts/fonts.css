@@ -1,0 +1,49 @@
+@font-face {
+  font-family: "GothamSSm";
+  src: url("GothamSSm-Book.eot");
+  src: local("GothamSSm Book"), local("GothamSSm-Book"),
+    url("GothamSSm-Book.woff") format("woff"),
+    url("GothamSSm-Book.ttf") format("truetype");
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "GothamSSm";
+  src: url("GothamSSm-XLight.eot");
+  src: local("GothamSSm ExtraLight"), local("GothamSSm-XLight"),
+    url("GothamSSm-XLight.woff") format("woff"),
+    url("GothamSSm-XLight.ttf") format("truetype");
+  font-weight: 200;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "GothamSSm";
+  src: url("GothamSSm-Medium.eot");
+  src: local("GothamSSm Medium"), local("GothamSSm-Medium"),
+    url("GothamSSm-Medium.woff") format("woff"),
+    url("GothamSSm-Medium.ttf") format("truetype");
+  font-weight: 500;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "GothamSSm";
+  src: url("GothamSSm-Light.eot");
+  src: local("GothamSSm Light"), local("GothamSSm-Light"),
+    url("GothamSSm-Light.woff") format("woff"),
+    url("GothamSSm-Light.ttf") format("truetype");
+  font-weight: 300;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "GothamSSm";
+  src: url("GothamSSm-Bold.eot");
+  src: local("GothamSSm Bold"), local("GothamSSm-Bold"),
+    url("GothamSSm-Bold.woff") format("woff"),
+    url("GothamSSm-Bold.ttf") format("truetype");
+  font-weight: bold;
+  font-style: normal;
+}
