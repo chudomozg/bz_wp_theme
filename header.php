@@ -37,8 +37,8 @@
                     <?php endif; ?>
 
                 </div>
-                <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#main-nav" aria-controls="" aria-expanded="false" aria-label="Toggle navigation">
-                    <span class="navbar-toggler-icon"></span>
+                <button class="navbar-toggler collapsed" type="button" data-toggle="collapse" data-target="#main-nav" aria-controls="" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="bz-navbar-toggler"></span>
                 </button>
 
                 <?php
@@ -48,7 +48,7 @@
                 'container_id'    => 'main-nav',
                 'container_class' => 'collapse navbar-collapse justify-content-end',
                 'menu_id'         => false,
-                'menu_class'      => 'navbar-nav',
+                'menu_class'      => 'navbar-nav pt-xl-0 pt-3',
                 'depth'           => 3,
                 'fallback_cb'     => 'wp_bootstrap_navwalker::fallback',
                 'walker'          => new wp_bootstrap_navwalker()

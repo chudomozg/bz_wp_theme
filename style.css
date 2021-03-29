@@ -11,6 +11,97 @@ Version: 0.1
 .
 */
 
+/* Общие */
+button,
+button:active,
+button:focus {
+  outline: none !important;
+}
+
+h2 {
+  font-size: 48px;
+  font-weight: 700;
+  line-height: 80px;
+}
+
+/* button */
+.formfield-submit-button {
+  display: inline-flex;
+}
+
+.bz-button {
+  padding: 12px 100px 12px 12px;
+  font-weight: 500;
+  font-size: 18px;
+  border: solid 1px;
+  border-radius: 0;
+  color: #000000 !important;
+  border: solid 2px #000000 !important;
+  box-shadow: none !important;
+}
+
+.formfield-submit-button__line {
+  position: relative;
+  width: 50px;
+  height: 2px;
+  left: -153px;
+  top: 26px;
+  background: currentColor;
+  transition: width 0.2s;
+}
+
+.formfield-submit-button:hover .formfield-submit-button__line {
+  width: 100px;
+}
+
+.bz-button:disabled {
+  background-color: #cacaca !important;
+  color: #000000;
+}
+
+.bz-button_beige,
+.bz-button_beige:hover,
+.bz-button_beige:focus,
+.bz-button_beige:not(:disabled):not(.disabled):active {
+  background-color: #d5a167;
+}
+
+.bz-button_white,
+.bz-button_white:hover,
+.bz-button_white:focus,
+.bz-button_white:not(:disabled):not(.disabled):active {
+  background-color: #ffffff;
+}
+
+/* checkbox */
+label input[type="checkbox"] {
+  position: absolute;
+  z-index: -1;
+  opacity: 0;
+  display: block;
+  width: 0;
+  height: 0;
+}
+
+.bz-cf-checkbox-wrapper label span::before {
+  content: "";
+  display: inline-block;
+  height: 25px;
+  width: 25px;
+  border: solid 1px #000000;
+  position: absolute;
+  top: -5px;
+  left: 0;
+}
+
+.bz-cf-checkbox-wrapper label input[type="checkbox"]:checked + span:before {
+  background-image: url(./assets/images/checkbox.svg);
+}
+
+.formfield-iagree label span {
+  padding-left: 25px;
+}
+
 /* body */
 body {
   font-family: "GothamSSm";
@@ -45,7 +136,7 @@ body {
 .nav-link:visited,
 .nav-link:active {
   color: #ffffff !important;
-  size: 24px !important;
+  font-size: 18px;
 }
 
 .current_page_item .nav-link {
@@ -70,6 +161,61 @@ body {
   color: #d5a167;
 }
 
+.navbar-toggler {
+  display: flex; /* используем flex для центрирования содержимого */
+  align-items: center; /* центрируем содержимое кнопки */
+  width: 30px;
+  height: 30px;
+  cursor: pointer;
+  z-index: 1;
+  justify-content: center;
+}
+
+.bz-navbar-toggler,
+.bz-navbar-toggler::before,
+.bz-navbar-toggler::after {
+  display: block;
+  position: absolute;
+  width: 30px;
+  height: 2px;
+  background-color: #d5a167;
+}
+
+.bz-navbar-toggler::before {
+  content: "";
+  top: -10px;
+}
+
+.bz-navbar-toggler::after {
+  content: "";
+  top: 10px;
+}
+
+.navbar-toggler:not(.collapsed) > span {
+  transform: rotate(45deg);
+}
+
+.navbar-toggler:not(.collapsed) > span::before {
+  top: 0;
+  transform: rotate(0);
+}
+
+.navbar-toggler:not(.collapsed) > ::after {
+  top: 0;
+  transform: rotate(90deg);
+}
+
+.navbar-toggler,
+.navbar-toggler:active,
+.navbar-toggler:focus {
+  border: none !important;
+  outline: none !important;
+}
+
+.menu-item {
+  padding-right: 0.5rem;
+}
+
 /* footer */
 .bz-footer {
   background-color: #000000;
@@ -77,6 +223,7 @@ body {
   color: #ffffff;
   font-size: 16px;
   font-weight: normal;
+  padding: 100px 0 80px 0;
 }
 
 .footer-copyright {
@@ -85,7 +232,89 @@ body {
   font-weight: 200;
 }
 
-.footer-link {
+.footer-link,
+.footer-link:hover {
   color: #ffffff;
   text-decoration: underline;
+}
+
+/* footer contact form */
+.bz-contact-form {
+  padding: 80px 0 80px;
+  background: 120% 100% no-repeat url("./assets/images/foter-cf-bg.jpg");
+}
+
+.bz-cf-form__wrapper {
+  background-color: #d5a167;
+  padding: 40px 28px 35px 28px;
+}
+
+.bz-contact-form__label {
+  font-size: 13px;
+  font-weight: 500;
+}
+
+.bz-contact-form__formfield {
+  padding-bottom: 10px;
+}
+
+.formfield-question textarea {
+  height: 120px;
+}
+
+.bz-contact-form__link,
+.bz-contact-form__link:hover,
+.bz-contact-form__link:active {
+  color: #000000;
+  text-decoration: underline;
+}
+
+.formfield-iagree {
+  margin: 10px 0;
+  font-size: 13px;
+  font-weight: 500;
+}
+
+.bz-cf-textpart_title {
+  margin-top: 80px;
+}
+
+/* // Extra small devices (portrait phones, less than 576px) */
+@media (max-width: 575.98px) {
+  .bz-footer {
+    height: auto;
+  }
+}
+
+/* // Small devices (landscape phones, less than 768px) */
+@media (max-width: 767.98px) {
+  .bz-footer {
+    height: auto;
+  }
+}
+
+/* // Medium devices (tablets, less than 992px) */
+@media (max-width: 991.98px) {
+  .bz-contact-form {
+    background: none;
+  }
+
+  .bz-cf-textpart_title {
+    margin-top: 0;
+  }
+
+  .bz-cf-textpart {
+    margin-bottom: 50px;
+  }
+}
+
+/* // Large devices (desktops, less than 1200px) */
+@media (max-width: 1199.98px) {
+  .bz-contact-form {
+    background-position: 165% 100%;
+  }
+
+  .bz-cf-textpart_content {
+    padding-right: 50px;
+  }
 }
